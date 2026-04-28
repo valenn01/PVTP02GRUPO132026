@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio14</title>
+</head>
+<body>
+<script>
+    function mostrarArreglo(arreglo) {
+        document.write(`<h3>mostrando el arreglo:</h3>`);
+        for (let i = 0; i < arreglo.length; i++) {
+            document.write(`Posición ${i}: ${arreglo[i]} <br>`);
+        }
+    }
+
+    function duplicar(duplicacion){
+        let nuevoArreglo = [];
+        for (let i = 0; i < duplicacion.length; i++){
+            let resultado = Number(duplicacion[i]) * 2;
+            nuevoArreglo.push(resultado);
+        }
+        return nuevoArreglo;
+    }
+
+    let cantidad = prompt("uantos numeros vas a ingresar?");
+    let miArreglo = [];
+
+    for (let i = 0; i < cantidad; i++) {
+        let numero = prompt(`ingresa el numero ${i + 1}`);
+        miArreglo.push(numero); 
+    }
+
+    document.write(`<h2>original:</h2>`);
+    mostrarArreglo(miArreglo);
+
+    let arregloDoble = duplicar(miArreglo);
+
+    document.write(`<h2>duplicado:</h2>`);
+    mostrarArreglo(arregloDoble);
+</script>
+</body>
+</html>
