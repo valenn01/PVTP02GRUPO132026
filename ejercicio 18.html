@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - calcularMayor</title>
+</head>
+<body>
+    <script>
+        function calcularMayor(numero1, numero2) {
+            if (numero1 > numero2) {
+                return `El número ${numero1} es mayor que ${numero2}`;
+            } else if (numero2 > numero1) {
+                return `El número ${numero2} es mayor que ${numero1}`;
+            } else {
+                return `Ambos números (${numero1} y ${numero2}) son iguales`;
+            }
+        }
+
+        // Ejemplo//
+        document.write(`${calcularMayor(21, 9)} <br>`);
+        document.write(`${calcularMayor(5, 16)} <br>`);
+        document.write(`${calcularMayor(4, 4)} <br>`);
+    </script>
+</body>
+</html>

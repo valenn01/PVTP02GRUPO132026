@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <title>Ejercicio 16 - sumarRango</title>
+
+   </head>
+     <body>
+         <script>
+
+            function sumarRango(inicio, final) {
+             if (inicio > final) {
+              return "Error: el numero incial (${inicio}) es mayor que el final(${fin})";
+             }
+             let suma = 0;
+             for (let i = inicio; i <= final ; i++) {
+                  suma +=i;
+               }
+
+               return "La suma del rango entre ${inicio} y ${fin} es: ${suma}";
+            }
+                // Ejemplos//
+            document.write("${sumarRango(1, 5)} <br>"); //Resultado:15//
+            document.write("${sumarRango(4, 4)} <br>"); //Resultado:4//
+            document.write("${sumarRango(10, 7)} <br>"); //Resultado: Error//
+         </script>   
+      </body>  
+</html>
