@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Países y Capitales</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #90b0b8;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .box {
+            background: rgb(197, 56, 56);
+            padding: 25px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 0px 10px rgba(206, 19, 19, 0.2);
+        }
+
+        select {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Países y Capitales de América</h2>
+
+        <!-- Select de países -->
+        <label>País:</label><br>
+        <select id="pais">
+            <option value="">Seleccione un país</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Chile">Chile</option>
+            <option value="Perú">Perú</option>
+            <option value="México">México</option>
+            <option value="Colombia">Colombia</option>
+        </select>
+
+        <br>
+
+        <!-- Select de capitales -->
+        <label>Capital:</label><br>
+        <select id="capital">
+            <option value="">Seleccione una capital</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Brasilia">Brasilia</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Lima">Lima</option>
+            <option value="Ciudad de México">Ciudad de México</option>
+            <option value="Bogotá">Bogotá</option>
+        </select>
+    </div>
+
+    <script>
+        // Relación país → capital
+        const paisCapital = {
+            "Argentina": "Buenos Aires",
+            "Brasil": "Brasilia",
+            "Chile": "Santiago",
+            "Perú": "Lima",
+            "México": "Ciudad de México",
+            "Colombia": "Bogotá"
+        };
+
+        const selectPais = document.getElementById("pais");
+        const selectCapital = document.getElementById("capital");
+
+        // Evento change
+        selectPais.addEventListener("change", function() {
+
+            let pais = selectPais.value;
+            let capital = paisCapital[pais];
+
+            // Seleccionar automáticamente la capital
+            selectCapital.value = capital;
+
+            // Mostrar en consola
+            console.log("País seleccionado: " + pais);
+            console.log("Capital correspondiente: " + capital);
+        });
+    </script>
+
+</body>
+</html>
